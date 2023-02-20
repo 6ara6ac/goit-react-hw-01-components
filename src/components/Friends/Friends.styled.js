@@ -30,6 +30,8 @@ background-color:${friends=> {
         return 'green';
         case false:
         return 'red';
+        default:
+        return 'white';
     }
 }};
 `
