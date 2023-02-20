@@ -10,6 +10,10 @@ import stats from "../data/data.json"
 import { FriendList } from "./Friends/Friends"
 import friends from "../data/friends.json"
 
+import { TransactionHistory } from "./Transactions/Transaqtions"
+import transactions from "../data/transactions.json"
+
+
 
 export const App = () => {
     return(<div>
@@ -20,7 +24,8 @@ export const App = () => {
             avatar={dataProfile.avatar}
             stats={dataProfile.stats}/>        
         <Statistics title="Upload stats" stats={stats}/>
-        <FriendList friends={friends} />;
+        <FriendList friends={friends} />
+        <TransactionHistory items={transactions} />
         <GlobalStyle/>
         </div>
     )
