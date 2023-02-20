@@ -31,7 +31,7 @@ background-color:${friends=> {
         case false:
         return 'red';
         default:
-        return 'white';
+        return 'blue';
     }
 }};
 `
