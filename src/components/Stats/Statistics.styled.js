@@ -35,6 +35,8 @@ background-color:${stats=> {
         return 'teal';
         case 'id-5':
         return 'pink';
+        default:
+        return 'white';
     }
 } }
 `
