@@ -9,11 +9,17 @@ export const Statistics = ({ stats, title }) => {
           .toString(16)
           .padStart(6, 0)}`;
       }
-    
 
+    function onTitleRender() {
+      if (title !== undefined) {
+      return <Title className="title">{title}</Title>
+      }
+      return;
+    }
+    
 return(
 <Section className="statistics">
-<Title className="title">{title}</Title>
+{onTitleRender()}
 <SectionList>
     {stats.map(({label, id, percentage}) => {
     return <SectionItem key={id} id={id} className="item" color={getRandomHexColor()}>
@@ -30,7 +36,7 @@ return(
 Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
-      PropTypes.shape({
+        PropTypes.shape({
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
         percentage: PropTypes.number.isRequired,
